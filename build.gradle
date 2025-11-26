@@ -45,7 +45,7 @@ repositories {
 
 def jvmsToTest = System.getenv("JVMS_TO_TEST") ?: "JAVA_HOME"
 
-def minJavaCompatibilityVersion = JavaVersion.VERSION_1_7
+def minJavaCompatibilityVersion = JavaVersion.VERSION_1_8
 sourceCompatibility = minJavaCompatibilityVersion
 targetCompatibility = minJavaCompatibilityVersion
 
