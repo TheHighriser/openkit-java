@@ -15,20 +15,18 @@
  */
 
 def coverageReportDir = file("$buildDir/reports/coverage/jacoco")
+def coverageXmlReportFile = file("${coverageReportDir}/jacocoReport.xml")
 
 jacoco {
     toolVersion = "0.8.8"
-    reportsDir = coverageReportDir
 }
-
-def coverageXmlReportFile = file("${coverageReportDir}/jacocoReport.xml")
 
 jacocoTestReport {
     reports {
-        xml.enabled = true
-        xml.destination = coverageXmlReportFile
-        html.enabled = true
-        html.destination = file("${coverageReportDir}/html")
+        xml.required = true
+        xml.outputLocation = coverageXmlReportFile
+        html.required = true
+        html.outputLocation = file("${coverageReportDir}/html")
     }
 }
 
