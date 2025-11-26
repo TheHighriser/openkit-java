@@ -18,7 +18,7 @@ def coverageReportDir = file("$buildDir/reports/coverage/jacoco")
 def coverageXmlReportFile = file("${coverageReportDir}/jacocoReport.xml")
 
 jacoco {
-    toolVersion = "0.8.8"
+    toolVersion = "0.8.12"
 }
 
 jacocoTestReport {
